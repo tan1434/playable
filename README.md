@@ -3,11 +3,6 @@
 宝石填色（Jewel Coloring）试玩广告完整实现：图案底图 + 打乱小球 + 暂存区中转 + 填色归位。
 玩法模型经同类投放样本调研与需求逐轮确认，美术素材来自 Figma 设计稿；移动端竖屏，可构建 Web / Android。
 
-## 快速开始
-
-1. 用 **Cocos Creator 3.8.8** 打开本目录（3.8.0 亦可）。
-2. 双击 `assets/scenes/GameScene.scene`，点 ▶ 预览（浏览器/模拟器）。
-
 玩法：点同色连通组悬浮 → 点暂存区存入 → 点同色空底图填回 → 颜色完成扫光 → 通关波次扫光 →
 url 弹到屏幕中间 → 手指引导下载。
 
@@ -72,9 +67,8 @@ JewelColoring/
 2. Android：`CocosCreator.exe --project <工程> --build "configPath=build.android.json"`
 
 > 构建配置就是这两个 JSON 文件（平台 / release / 引擎模块裁剪 / 包名 ABI 签名等选项），
-> Cocos 编辑器"构建发布"面板与上面的 CLI 都读它，是标准功能，无需额外工程。
 
-**② WebView 壳 APK（独立小工程，非 Cocos 内置功能）**
+**② WebView 壳 APK**
 
 壳工程源码在本仓库 `shell-webview/`：把 web-mobile 构建产物拷入 `shell-webview/app/src/main/assets/www/`（目录已预留，内容不入库），用 Android Studio 打开该目录
 或 `gradle assembleRelease` 打包（构建背景见 docs/03-process.md 第 5 节）。
