@@ -16,22 +16,33 @@ url 弹到屏幕中间 → 手指引导下载。
 ```
 JewelColoring/
 ├─ assets/
-│  ├─ scenes/GameScene.scene      # 场景（节点/组件绑定齐全）
-│  ├─ scripts/                    # 全部 TS 源码
-│  │  ├─ core/                    # MetaGameController / BSGameDirector / 关卡 / 配置 / 常量
-│  │  ├─ board/                   # BoardView（棋盘/暂存区/宝石层/触摸/映射）
-│  │  ├─ gem/                     # GemElementView（三态状态机）
-│  │  ├─ fx/                      # FlySystem（飞行）/ EffectSystem（扫光/tip）
-│  │  ├─ ui/                      # GuideController（四步引导）
-│  │  └─ utils/                   # ResourceStore / AudioService / PlayableAdPlatform
-│  └─ resources/
-│     ├─ atlas/gams,bases,base.pac # 小球/底纹图集
-│     ├─ images/                  # bg/title/url/tray/tip/手指
-│     ├─ audio/                   # BGM/点击/落位/完成/OK/tip
-│     └─ res/config/              # GlobalConfig / GuideConfig / Level_1
-├─ docs/                          # 参考分析、设计文档、过程记录
-├─ build/                         # 构建产物（Android APK / web）
-└─ package.json
+│  ├─ resources/
+│  │  ├─ atlas/                    # gams/*Gem、bases/*Base、slot、base.pac 自动图集
+│  │  ├─ audio/                    # BGM/点击/落位/完成/OK/tip（MP3）
+│  │  ├─ images/                   # bg/title/url/tray/tip/手指
+│  │  └─ res/config/               # game/GlobalConfig、guide/GuideConfig、level/Level_1
+│  ├─ scenes/
+│  │  └─ GameScene.scene           # 场景（节点/组件绑定齐全）
+│  └─ scripts/                     # 全部 TS 源码
+│     ├─ board/                    # BoardView（棋盘/暂存区/宝石层/触摸/映射）
+│     ├─ cache/                    # 空目录（Cocos 自动生成）
+│     ├─ core/                     # MetaGameController / BSGameDirector / 关卡 / 配置 / 常量
+│     ├─ fx/                       # FlySystem（飞行）/ EffectSystem（扫光/tip）
+│     ├─ gem/                      # GemElementView（三态状态机）
+│     ├─ ui/                       # GuideController（四步引导）
+│     └─ utils/                    # ResourceStore / AudioService / PlayableAdPlatform
+├─ build/
+│  └─ apk/                         # jewel-coloring-web-shell.apk（0.99MB 最终产物）
+├─ docs/                           # 参考分析、设计文档、过程记录（3 份）
+├─ settings/
+│  └─ v2/packages/                 # 工程设置
+├─ shell-webview/                  # WebView 壳 APK 工程（MainActivity + AssetServer）
+├─ .gitignore
+├─ README.md
+├─ build.android.json              # Android 构建配置（arm64 / release / 签名）
+├─ build.web-mobile.json           # Web 构建配置（引擎模块裁剪）
+├─ package.json
+└─ tsconfig.json
 ```
 
 ## 文档
@@ -65,7 +76,5 @@ JewelColoring/
 
 **② WebView 壳 APK（独立小工程，非 Cocos 内置功能）**
 
-壳工程源码在本仓库 `shell-webview/`（MainActivity + 零依赖 AssetServer + WebView，核心约 20 行）：
-把 web-mobile 构建产物拷入 `shell-webview/app/src/main/assets/www/`（目录已预留，内容不入库），用 Android Studio 打开该目录
-或 `gradle assembleRelease` 打包（构建背景见 docs/03-process.md 第 5 节）。这是为
-"手机直接装 0.99MB 试玩包"额外写的 WebView 壳，Cocos 本身不产出这种壳，属于配套交付物。
+壳工程源码在本仓库 `shell-webview/`把 web-mobile 构建产物拷入 `shell-webview/app/src/main/assets/www`，用 Android Studio 打开该目录
+或 `gradle assembleRelease` 打包（构建背景见 docs/03-process.md 第 5 节）。
