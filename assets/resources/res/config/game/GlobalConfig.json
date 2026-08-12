@@ -1,0 +1,7 @@
+{
+  "levelRange": { "min": 1, "max": 10 },
+  "showBanner": false,
+  "showTitle": true,
+  "showDebugfinger": false,
+  "winTargetProgressPercent": 1
+}

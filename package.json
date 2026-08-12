@@ -1,0 +1,9 @@
+{
+  "name": "jewel-coloring",
+  "version": "1.0.0",
+  "description": "Jewel Coloring core gameplay demo (gem sorting) — Cocos Creator 3.8",
+  "creator": {
+    "version": "3.8.8"
+  },
+  "uuid": "86f2cffc-e0b0-4a9d-88fe-d6b969d0efa5"
+}

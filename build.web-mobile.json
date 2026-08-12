@@ -1,0 +1,18 @@
+{
+  "platform": "web-mobile",
+  "debug": false,
+  "md5Cache": false,
+  "buildPath": "project://build",
+  "outputName": "web-mobile",
+  "includeModules": [
+    "base",
+    "2d",
+    "ui",
+    "graphics",
+    "tween",
+    "audio",
+    "affine-transform",
+    "custom-pipeline",
+    "custom-pipeline-builtin-scripts"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "steps": [
+    { "region": 0, "grid": 220, "text": "点击这颗宝石" },
+    { "region": 1, "grid": 0, "text": "点击暂存区，把宝石放进去" },
+    { "region": 0, "grid": 324, "text": "点击相同颜色的宝石" },
+    { "region": 0, "grid": 220, "text": "点击空位，把宝石放回去" }
+  ]
+}

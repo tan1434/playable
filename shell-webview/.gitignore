@@ -1,0 +1,8 @@
+# Android/Gradle 构建产物
+build/
+.gradle/
+local.properties
+*.log
+.idea/
+# Web 包（由 web-mobile 构建产物拷贝而来，不入库）
+app/src/main/assets/www/

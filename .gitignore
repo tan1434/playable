@@ -1,0 +1,18 @@
+# Cocos Creator
+library/
+temp/
+local/
+profiles/
+native/
+node_modules/
+.creator/
+
+# Build outputs: keep only final APK artifacts
+build/*
+!build/apk/
+!build/apk/*.apk
+build/apk/*native*
+
+# OS
+.DS_Store
+Thumbs.db
