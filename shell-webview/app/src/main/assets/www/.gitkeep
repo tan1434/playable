@@ -1,0 +1,1 @@
+此目录为 Web 包挂载点：把 Cocos 的 web-mobile 构建产物拷入本目录（assets/www 下的内容不入库，见 ../.gitignore）。

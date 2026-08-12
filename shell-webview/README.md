@@ -7,7 +7,7 @@
 
 ## 构建
 
-1. 把最新 web-mobile 构建产物拷入 `app/src/main/assets/www/`（工程根目录不含该目录，需自行拷贝）。
+1. 把最新 web-mobile 构建产物拷入 `app/src/main/assets/www/`（目录已用 `.gitkeep` 占位预留；web 包内容不入库，需自行拷贝）。
 2. 用 Android Studio 打开本目录，或命令行（需 JDK 17、Android SDK、AGP 8.10）：
    `gradle assembleRelease` 
 3. 产物：`app/build/outputs/apk/release/app-release.apk`。
