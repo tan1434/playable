@@ -76,5 +76,5 @@ JewelColoring/
 
 **② WebView 壳 APK（独立小工程，非 Cocos 内置功能）**
 
-壳工程源码在本仓库 `shell-webview/`把 web-mobile 构建产物拷入 `shell-webview/app/src/main/assets/www`，用 Android Studio 打开该目录
+壳工程源码在本仓库 `shell-webview/`：把 web-mobile 构建产物拷入 `shell-webview/app/src/main/assets/www/`（目录已预留，内容不入库），用 Android Studio 打开该目录
 或 `gradle assembleRelease` 打包（构建背景见 docs/03-process.md 第 5 节）。
